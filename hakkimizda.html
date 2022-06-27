@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!--favicon-->
+     <link rel="icon" type="image/x-icon" href="img/n.png">
+     <!--Fontawesome ikonları-->
+     <script src="https://kit.fontawesome.com/eb96f16093.js" crossorigin="anonymous"></script>
+   <!--dist-img-->
+   <link rel="stylesheet" href="dist/lightbox.css">
+     <!--My css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/skins/profile.css">
+    
+
+    <title>Hello, world!</title>
+    <style>
+      body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/galeri3.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+     
+    
+     
+      .hakkimizda p, .hakkimizda h5{
+        margin-bottom: 20px;
+        text-align: center;
+
+      }
+      .hakkimizda h5{
+        font-weight: 600;
+
+      }
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 40%;
+  height: 500px;
+  overflow: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+  padding: 2px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+  border: 3px solid #4EB7D0;
+  
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 60%;
+  border-left: none;
+  height: 500px;
+}
+.tabcontent p{
+  font-size: 15px;
+}
+.avatar {
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 0;
+}
+.tablinks p i{
+  color: rgb(99, 99, 99) ;
+}
+.tablinks p i.active{
+  color: rgb(161, 19, 19) ;
+}
+
+
+@media screen and (max-width: 992px){
+  .tab button{
+        text-align: center;
+    }
+    
+}
+
+      
+
+      </style>
+  </head>
+  <body>
+    <div class="container-fluid border-bottom iletisim">
+        <div class="row">
+          <div class="col-10 m-auto text-center">
+            <p class="ms-4">
+              <i class="fa fa-phone"><a class="ms-2 text-secondary" href="tel:+902129124090">+902129124090</a></i>
+                <i class="fa fa-phone"><a class="ms-2 text-secondary" href="tel:+902129124090">+902129124090</a></i>  
+                <i class="fa fa fa-envelope"><a class="ms-2 text-secondary" href="mailto:iletisim@neosyazilim.com">iletisim@neosyazilim.com</a></i>
+            </p>
+          </div>
+  
+        </div>
+  
+      </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-xl navbar-light shadow-sm" style=" z-index: 1;">
+        <div class="container">
+          <a class="navbar-brand " href="#"><img src="img/logo.png" alt="" style="width: 150px;">
+          </a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+				<span class="menu-icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">ANASAYFA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">EĞİTİMLER</a>
+              </li>
+              <li class="nav-item dropdown nav-buyuk">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  HAKKIMIZDA
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">SERTİFİKA</a></li>
+                  <li><a class="dropdown-item" href="#">GALERİ</a></li>
+                  <li><a class="dropdown-item" href="#">BİZ KİMİZ</a></li>
+                </ul>
+              </li>
+              <li class="nav-item nav-mobil">
+                <a class="nav-link" href="#">SERTİFİKA</a>
+              </li>
+              <li class="nav-item nav-mobil" >
+                <a class="nav-link" href="#">GALERİ</a>
+              </li>
+              <li class="nav-item nav-mobil">
+                <a class="nav-link" href="#">BİZ KİMİZ</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOGLAR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">İLETİŞİM</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SSS</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav d-flex flex-row-reverse bd-highlight ">
+              <li class="nav-item">
+                <a class="nav-link text-danger" aria-current="page" href="uyekayit.html" style="margin-left: 20px;">ÜYE OL</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="login.html" style="margin-left: 30px;">GİRİŞ YAP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Navbar Bitiş-->
+
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1 style="font-size:50px">NEOS YAZILIM</h1>
+        </div>
+      </div>
+      
+
+      <!--BİZ KİMİZ-->
+      <div class="container mt-5">
+        <h2>HAKKIMIZDA</h2>
+        <h4 class="text-center"><b>Neos Yazılım & Akademi NEOS EGİTİM BİLİŞİM DANIŞMANLIK VE TİCARET A.Ş'nin alt kuruluşudur</b></h4>
+        <div class="line-decimg">
+          <img src="img/line-dec.png" alt="">
+      </div>
+        <div class="row">
+          <div class="col hakkimizda">
+            <p>Neos Yazılım Akademi, Yazılım Mühendisi ve eğitmen Duhan Gökkaya tarafından İstanbul merkezli olarak kurulmuş bir online (canlı) yazılım akademisidir. Uluslararası ISO stadartlarında akredite olan kurumumuz; öğrencilerine ICCW, Altınbaş Üniversitesi, Ayvansaray Üniversitesi, Gedik Üniversitesi, Gebze Teknik Üniversitesi ve Kıbrıs İlim Üniversitesi işbirliğiyle faaliyet göstermekte ve üniversite onaylı sertifikasyon yapmaktadır.</p>
+            <p>Uzaktan-canlı olarak gerçekleştirdiğimiz eğitimlerimizde; öğrencilerimizin yüz yüze eğitim için yolda harcayacağı zamanı proje geliştirerek kullanmalarını ve remote çalışma prensibine alışmalarını sağlayarak, yüz yüze eğitimin gerekliliği konusundaki önyargıyı ortadan kaldırıp zaten dijital olan yazılım mesleğini en doğru yerde, yani dijitalde öğrenmelerini sağlamaktayız. Bu sayede yalnızca büyükşehirlerden değil, ülkemizin her yerinden ve her yaştan yazılıma ilgi duyan katılımcılarımıza en kaliteli eğitimleri sunmaktayız. Sunduğumuz eğitimlerin canlı video kayıtlarını alarak her ders sonrası öğrencilerimize iletmekte, hayatın yoğunluğu içerisinde zaman zaman kaçırabileceğiniz canlı dersleri sonradan izleyip eğitmen ile ders dışında da iletişimde kalmanızı teşvik etmekteyiz.</p>
+            <p>Neos Akademi bünyesindeki Yazılım Eğitimlerinin müfredatları uluslararası standartları karşılamakta olup, Bilgisayar Mühendisi ve Yazılım Mühendisi eğitmenlerimiz ve Duhan Gökkaya tarafından "herkes için öğrenilebilir" olması misyonuyla hazırlanmıştır. Eğitimlerimizi herkes için öğrenilebilir kılan özelliklerden bir diğeri; görevini adanmışlık duygusuyla yerine getiren eğitmen ve danışman kadromuzun 7/24 öğrencilerimizin gelişimi için çalışmasıdır. Akademi bünyesindeki eğitim programlarından herhangi bir tanesine kayıtlı olan öğrenci, dilediği zaman eğitmeninden bireysel destek alabilmektedir. </p>
+            <p>Eğitim programlarımız yalnızca canlı dersleri değil; ödev, quiz, projeler, mentörlük desteği, sektör simülasyonu ve staj desteğini de kapsamaktadır. Akademimizdeki eğitim programları gerçek anlamda sektörde yer alacak Yazılım Uzmanları yetiştirme misyonuyla hazırlanmış olup, Türkiye'de ilk kez Neos Yazılım tarafından geliştirilen <b>sektör simülasyonu</b> ile, öğrencilerimizle bireysel mülakatlar gerçekleştirmekte ve bu sayede iş hayatında karşılaşacakları durumları deneyimleyerek kendinden emin yazılımcılar olarak mezun olmalarını sağlamaktayız.</p>
+
+            <p>Neos Yazılım Akademi olarak yalnızca Türkiye'de değil, Avrupada da ingilizce eğitimlerle faaliyet göstermekteyiz.</p>
+
+            <h5>DUHAN GÖKKAYA KİMDİR?</h5>
+            <p>Duhan Gökkaya; İstanbul Bakırköy doğumlu bir Yazılım Mühendisi, Eğitmen ve İş İnsanıdır. Türkiye’deki örgün öğretim sistemlerinin ve bilgi kaynaklarının yetersizliği nedeniyle uzun yıllar sıfırdan başlayan her yaştan katılımcılar için yazılım eğitimleri gerçekleştirmiş, geliştirdiği öğretim sistemine artan talep dolayısıyla Neos Yazılım Akademi’yi kurarak tecrübelerini başka eğitmenlere aktarmıştır. Neos Yazılım Akademi şu anda genç ve dinamik kadrosuyla, Üniversiteler tarafından onaylı eğitimleriyle, yüzde yüz memnuniyet ve yüksek başarı ilkesiyle her ay yüzlerce Yazılım Uzmanı mezun etmektedir. Eğitim müfredatını geleneksel ve kullanışsız bilgilerle doldurmak yerine Stanford, Harvard gibi üniversitelerin bilgisayar bilimleri bölümlerinin müfredatını takip ederek güncellemektedir .</p>
+            <p>Neos Yazılım Akademi, kurucusu Duhan Gökkaya’nın idealleri ve ilkeleriyle ilerlemekte ve bu ilkelerden biri olan şeffaflık ilkesi doğrultusunda sosyal media platformlarında sürekli canlı yayınlar düzenlemekte, ve -sektörde sadece Neos Yazılım - kurumdaki öğrencilerin düşüncelerini kurumun öğrencisi olmayan kişilere kolayca aktarmasına olanak sağlamaktadır.</p>
+            <p>Duhan Gökkaya, eğitim sınıflarını yakından takip etmekte ve başarılı katılımcılar arasından ciddi oranda işe alım gerçekleştirerek kurumun yazılım geliştirme ekibinde yer almasına olanak tanımaktadır.</p>
+          </div>
+
+        </div>
+       
+        
+        
+      </div>
+
+      <!--Kadromuz-->
+      <div class="container mt-5">
+        <h2>KADROMUZ</h2>
+        <div class="line-decimg" style="margin-bottom: 100px;">
+          <img src="img/line-dec.png" alt="">
+      </div>
+        <div class="row">
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+          <div class="col">
+            <div class="avatar-container">
+              <div class="avatar-flip">
+                <img src="http://media.idownloadblog.com/wp-content/uploads/2012/04/Phil-Schiller-headshot-e1362692403868.jpg" height="150" width="150" style="z-index: 0;">
+                <img src="http://i1112.photobucket.com/albums/k497/animalsbeingdicks/abd-3-12-2015.gif~original" height="150" width="150">
+              </div>
+              <h2>Öznur Özen</h2>
+              <h4>Front-End Dev. & Eğitmen</h4>
+              <p>Neos Yazılım'da Front End Developer olarak, Neos Akademi'de eğitmen olarak görev almaktadır</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!--Yorumlar-->
+      <div class="container">
+        <h2>ÖĞRENCİ <span>YORUMLARI</span></h2>
+        <div class="line-decimg">
+            <img src="img/line-dec.png" alt="">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+                        <div class="row w-100">
+                            <div class="col-lg-3">
+                                <img src="img/detay.webp" alt="Avatar" class="avatar">
+                            </div>
+                            <div class="col-lg-7 m-auto">
+                                Öznur Özen <br>  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                            </div>
+                            <div class="col-lg-2">
+                              <p>26.02.2022</p><br>
+                              <p class="font-ikon"><i class="fa fa-share"></i></p>
+
+                            </div>
+
+                        </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">
+                      <div class="row w-100">
+                        <div class="col-lg-3">
+                            <img src="img/detay.webp" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="col-lg-7 m-auto">
+                            Öznur Özen <br>  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <div class="col-lg-2">
+                          <p>26.02.2022</p><br>
+                          <p class="font-ikon"><i class="fa fa-share"></i></p>
+
+                        </div>
+
+                    </div>
+                        
+                    </button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+                      <div class="row w-100">
+                        <div class="col-lg-3">
+                            <img src="img/detay.webp" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="col-lg-7 m-auto">
+                            Öznur Özen <br>  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <div class="col-lg-2">
+                          <p>26.02.2022</p><br>
+                          <p class="font-ikon"><i class="fa fa-share"></i></p>
+
+                        </div>
+
+                    </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo1')">
+                      <div class="row w-100">
+                        <div class="col-lg-3">
+                            <img src="img/detay.webp" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="col-lg-7 m-auto">
+                            Öznur Özen <br>  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <div class="col-lg-2">
+                          <p>26.02.2022</p><br>
+                          <p class="font-ikon"><i class="fa fa-share"></i></p>
+
+                        </div>
+
+                    </div>
+                    </button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo2')">
+                      <div class="row w-100">
+                        <div class="col-lg-3">
+                            <img src="img/detay.webp" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="col-lg-7 m-auto">
+                            Öznur Özen <br>  <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        </div>
+                        <div class="col-lg-2">
+                          <p>26.02.2022</p><br>
+                          <p class="font-ikon"><i class="fa fa-share"></i></p>
+
+                        </div>
+
+                    </div>
+                    </button>
+                  </div>
+                  
+                  <div class="bas-tabcontent">
+                      <div id="London" class="tabcontent">
+                        <div class="row" style="background-color: #ccc; padding: 2px;">
+                          <div class="col">
+                              <img src="img/detay.webp" alt="Avatar" class="avatar">
+                              <span style="font-weight: bold;"> Öznur Özen </span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                          </div>
+                        
+
+                      </div>
+                        
+                        <p><small><strong>TARİH: </strong>20.02.2022</small></p>
+                        <h4><strong>Yorum:</strong></h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ratione accusamus, deserunt facilis blanditiis consectetur quos? Quod doloribus illo fugit?</p>
+                             <div class="mt-5">
+                                <div class="mb-3 ">
+                                  <label for="exampleFormControlTextarea1" class="form-label"><h3>SEN DE YORUM YAP</h3></label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                  <button class="btn btn-success btn-lg" type="button">Gönder</button>
+                                </div>
+                             </div>
+                        
+                      </div>
+                      
+                      <div id="Paris" class="tabcontent">
+                        <div class="row" style="background-color: #ccc; padding: 2px;">
+                          <div class="col">
+                              <img src="img/detay.webp" alt="Avatar" class="avatar">
+                              <span style="font-weight: bold;"> Öznur Özen </span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                          </div>
+                        
+
+                      </div>
+                        
+                        <p><small><strong>TARİH: </strong>20.02.2022</small></p>
+                        <h4><strong>Yorum:</strong></h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ratione accusamus, deserunt facilis blanditiis consectetur quos? Quod doloribus illo fugit?</p>
+                             <div class="mt-5">
+                                <div class="mb-3 ">
+                                  <label for="exampleFormControlTextarea1" class="form-label"><h3>SEN DE YORUM YAP</h3></label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                  <button class="btn btn-success btn-lg" type="button">Gönder</button>
+                                </div>
+                             </div>
+                      </div>
+                      
+                      <div id="Tokyo" class="tabcontent">
+                        <div class="row" style="background-color: #ccc; padding: 2px;">
+                          <div class="col">
+                              <img src="img/detay.webp" alt="Avatar" class="avatar">
+                              <span style="font-weight: bold;"> Öznur Özen </span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                          </div>
+                        
+
+                      </div>
+                        
+                        <p><small><strong>TARİH: </strong>20.02.2022</small></p>
+                        <h4><strong>Yorum:</strong></h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ratione accusamus, deserunt facilis blanditiis consectetur quos? Quod doloribus illo fugit?</p>
+                             <div class="mt-5">
+                                <div class="mb-3 ">
+                                  <label for="exampleFormControlTextarea1" class="form-label"><h3>SEN DE YORUM YAP</h3></label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                  <button class="btn btn-success btn-lg" type="button">Gönder</button>
+                                </div>
+                             </div>
+                      </div>
+                      <div id="Tokyo1" class="tabcontent">
+                        <div class="row" style="background-color: #ccc; padding: 2px;">
+                          <div class="col">
+                              <img src="img/detay.webp" alt="Avatar" class="avatar">
+                              <span style="font-weight: bold;"> Öznur Özen </span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                          </div>
+                        
+
+                      </div>
+                        
+                        <p><small><strong>TARİH: </strong>20.02.2022</small></p>
+                        <h4><strong>Yorum:</strong></h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ratione accusamus, deserunt facilis blanditiis consectetur quos? Quod doloribus illo fugit?</p>
+                             <div class="mt-5">
+                                <div class="mb-3 ">
+                                  <label for="exampleFormControlTextarea1" class="form-label"><h3>SEN DE YORUM YAP</h3></label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                  <button class="btn btn-success btn-lg" type="button">Gönder</button>
+                                </div>
+                             </div>
+                      </div>
+                      <div id="Tokyo2" class="tabcontent">
+                        <div class="row" style="background-color: #ccc; padding: 2px;">
+                          <div class="col">
+                              <img src="img/detay.webp" alt="Avatar" class="avatar">
+                              <span style="font-weight: bold;"> Öznur Özen </span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                          </div>
+                        
+
+                      </div>
+                        
+                        <p><small><strong>TARİH: </strong>20.02.2022</small></p>
+                        <h4><strong>Yorum:</strong></h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore ratione accusamus, deserunt facilis blanditiis consectetur quos? Quod doloribus illo fugit?</p>
+                             <div class="mt-5">
+                                <div class="mb-3 ">
+                                  <label for="exampleFormControlTextarea1" class="form-label"><h3>SEN DE YORUM YAP</h3></label>
+                                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="text-center">
+                                  <button class="btn btn-success btn-lg" type="button">Gönder</button>
+                                </div>
+                             </div>
+                      </div>
+                  </div>
+                  </div>
+
+            </div>
+
+        </div>
+ 
+      </div>
+    
+      
+    <!--Yazılım Şirket Resimleri-->
+    <div class="container mt-4">
+        <h2><span>NEOS</span> Yazılım Şirket Resimleri</h2>
+        <div class="line-decimg">
+          <img src="img/line-dec.png" alt="">
+      </div>
+      <div class="row">
+          <div class="col-xl-4 col-lg-6 col-12 mt-4 ">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri1.jpg" data-lightbox="example-1"><img class="card-img-top example-image" src="img/galeri1.jpg" alt="image-1" /></a>
+                </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-12 mt-4">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri2.jpg" data-lightbox="example-2"><img class="card-img-top example-image" src="img/galeri2.jpg" alt="image-2" /></a>
+                </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-12 mt-4">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri3.jpg" data-lightbox="example-3"><img class="card-img-top example-image" src="img/galeri3.jpg" alt="image-3" /></a>
+                </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-12 mt-4">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri4.jpg" data-lightbox="example-4"><img class="card-img-top example-image" src="img/galeri4.jpg" alt="image-4" /></a>
+                </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-12 mt-4">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri5.jpeg" data-lightbox="example-5"><img class="card-img-top example-image" src="img/galeri5.jpeg" alt="image-5" /></a>
+                </div>
+          </div>
+          <div class="col-xl-4 col-lg-6 col-12 mt-4">
+              <div class="card shadow p-3 mb-5 bg-body rounded">
+                <a class="example-image-link" href="img/galeri6.jpg" data-lightbox="example-6"><img class="card-img-top example-image" src="img/galeri6.jpg" alt="image-6" /></a>
+                </div>
+          </div>
+      </div>
+    </div>
+    
+     
+     
+      
+
+      <!--footer-->
+    <div class="container-fluid arkaplan">
+      <footer class="row ">
+              <div class="col-lg-3 col-12 col mt-5">
+                  
+                    <h4 class="text-white mb-4"><b>Bize Ulaşın</b></h4>
+                    <p class="mb-3">İstanbul, Bakırköy'de bulunan merkez ofisimize her zaman bekleriz. Öncesinde telefonla randevu alabilirsiniz</p>
+                    <p class="mb-3"><i class="fa fa-location-arrow"></i> Cevizlik mahallesi, Hüsreviye sokak, No: 12, Bakırköy/İstanbul </p>
+                    <p class="mb-3"><i class="fa fa-phone"></i>  <a href="tel:+902129124090">+902129124090</a> </p>
+                    <p class="mb-3"><i class="fa fa-phone"></i>  <a href="tel:+905013205358">+905013205358</a> </p>
+                    <p class="mb-3"><i class="fa fa fa-envelope"></i> <a href="mailto:iletisim@neosyazilim.com">iletisim@neosyazilim.com</a>  </p>
+                
+              </div>
+              
+              <div class="col-lg-3 col-6 col mt-5">
+                <h4 class="text-white mb-4"><b>Hızlı Linkler</b></h4>
+                  <ul class="navbar-nav">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">ANASAYFA</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">EĞİTİMLER</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">AKREDİTASYON</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">HAKKIMIZDA</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">SATIŞ SÖZLEŞMESİ</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">İLETİŞİM</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">SSS</a></li>
+                  </ul>
+              </div>
+              
+              <div class="col-lg-3 col-6 col mt-5">
+                <h4 class="text-white mb-4"><b>Kategoriler</b></h4>
+                  <ul class="navbar-nav">
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">WEB GELİŞTİRME</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">SİBER GÜVENLİK</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">YAPAY ZEKA</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">MOBİL UYGULAMA GELİŞTİRME</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">İNGİLİZCE</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">PYTHON PROGRAMLAMA</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link">BACK END WEB GELİŞTİRME</a></li>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-12 col mt-5">
+                <div class="text-center mb-4">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="mb-4"><img src="img/altinbas.png" style="width:100px;height:40px; margin-bottom: 2px;" alt="">
+                  <img src="img/ayvansaray.png" style="width:100px;height:40px;" alt=""></li>
+                 
+                  <li class="mb-4"><img src="img/gebze.png" style="width:100px;height:40px; margin-bottom: 2px;" alt="">
+                  <img src="img/gedik.png" style="width:100px;height:40px;" alt=""></li>
+                 
+                  <li class="mb-4"><img src="img/iccd.jpeg" style="width:100px;height:40px; margin-bottom: 2px;" alt="">
+                  <img src="img/iccw.png" style="width:100px;height:40px;" alt=""></li>
+                  <li style="margin-top: 5px;"><img src="https://s.turkcell.com.tr/static_lib/assetsv2/common/images/content/turkcell-logo.png?1643377210000" alt="" style="width:90px;height:70px;"></li>
+                  </ul>
+                  </div>
+              </div>
+      </footer>   
+      
+   </div>
+   
+   <div class="container-fluid altbilgi">
+     
+    <div class="row">
+      <hr class="hr-stil">
+      <div class="col mb-4">
+        <p class="p-altbilgi">Copyright @2021 @2022 <a href="">NEOS</a>  EĞİTİM BİLİŞİM DANIŞMANLIK VE TİCARET A.Ş</p>
+      </div>
+    </div>
+   </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <!--Navbar-->
+    <script>
+      jQuery(function($) {
+          $(window).on('scroll', function() {
+          if ($(this).scrollTop() >= 200) {
+            $('.navbar').addClass('fixed-top');
+          } else if ($(this).scrollTop() == 0) {
+            $('.navbar').removeClass('fixed-top');
+          }
+        });
+        
+        function adjustNav() {
+          var winWidth = $(window).width(),
+            dropdown = $('.dropdown'),
+            dropdownMenu = $('.dropdown-menu');
+          
+          if (winWidth >= 768) {
+            dropdown.on('mouseenter', function() {
+              $(this).addClass('show')
+                .children(dropdownMenu).addClass('show');
+            });
+            
+            dropdown.on('mouseleave', function() {
+              $(this).removeClass('show')
+                .children(dropdownMenu).removeClass('show');
+            });
+          } else {
+            dropdown.off('mouseenter mouseleave');
+          }
+        }
+        
+        $(window).on('resize', adjustNav);
+        
+        adjustNav();
+      });
+      </script>
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="dist/lightbox.js"></script>
+
+
+    
+  </body>
+</html>
